@@ -3,8 +3,9 @@
 ### To Do
 - [x] Review primitive types
 - [x] Objects!
-- [ ] Passing primitives and objects to functions
-- [ ] Functions inside objects (using `this`)
+- [x] Passing primitives and objects to functions
+- [x] Functions inside objects (using `this`)
+- [x] Looping!
 
 
 
