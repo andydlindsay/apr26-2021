@@ -1,14 +1,14 @@
 # W01D04 - Callbacks!
 
 ### To Do
-- [ ] Functions as values
-- [ ] Function calling vs function passing
-- [ ] Callbacks and higher order functions
-- [ ] Anonymous functions
+- [x] Functions as values
+- [x] Function calling vs function passing
+- [x] Callbacks and higher order functions
+- [x] Anonymous functions
 - [ ] Arrow functions
 - [ ] Make our own higher order function
 
-
+// HOF
 
 
 
