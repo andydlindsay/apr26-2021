@@ -1,4 +1,4 @@
-import { announceResult } from '../helpers'
+import { announceResult, chooseRobotItem } from '../helpers'
 
 describe('announceResult function', () => {
   let fakeState;
@@ -33,4 +33,62 @@ describe('announceResult function', () => {
   test('returns "Waiting" if nothing is passed in', () => {
     expect(announceResult()).toBe('Waiting');
   });
+});
+
+describe('chooseRobotItem function', () => {
+
+  let testState;
+
+  beforeEach(() => {
+    testState = {
+      compSelection: null,
+      playerSelection: null,
+      status: 'Waiting',
+      cheating: false
+    };
+  });
+
+  test('given cheating is true, player selection is "tree", returns "axe"', () => {
+    testState.cheating = true;
+    testState.playerSelection = 'Tree';
+
+    const actual = chooseRobotItem(testState.cheating, testState.playerSelection);
+    const expected = 'Axe';
+
+    // chooseRobotItem(false, 'Axe');
+
+    expect(actual).toBe(expected);
+  });
+
+  test('given cheating is true, player selection is "axe", returns "moai"', () => {
+    testState.cheating = true;
+    testState.playerSelection = 'Axe';
+
+    const actual = chooseRobotItem(testState.cheating, testState.playerSelection);
+    const expected = 'Moai';
+
+    expect(actual).toBe(expected);
+  });
+
+  test('given cheating is true, player selection is "moai", returns "tree"', () => {
+    testState.cheating = true;
+    testState.playerSelection = 'Moai';
+
+    const actual = chooseRobotItem(testState.cheating, testState.playerSelection);
+    const expected = 'Tree';
+
+    expect(actual).toBe(expected);
+  });
+
+  test('given cheating is false, returns a valid selection', () => {
+    testState.cheating = false;
+    testState.playerSelection = 'Tree';
+
+    const actual = chooseRobotItem(testState.cheating, testState.playerSelection);
+    const options = ['Moai', 'Axe', 'Tree'];
+
+    // expect(options.includes(actual)).toBe(true);
+    expect(options).toContain(actual);
+  });
+
 });
