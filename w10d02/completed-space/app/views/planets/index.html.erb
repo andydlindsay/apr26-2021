@@ -1,0 +1,11 @@
+<h1>All the planets for <%= @star.star_name %>!</h1>
+
+<%= link_to "Stars", stars_path %>
+
+<% @planets.each do |planet| %>
+  <div class="planet" style="border: 1px solid salmon;">
+    <h2>Name: <%= planet.planet_name %></h2>
+    <h2>Moon: <%= planet.moon %></h2>
+    <h3>Star: <%= planet.star.star_name %></h3>
+  </div>
+<% end %>
