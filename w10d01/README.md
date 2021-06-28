@@ -3,7 +3,6 @@
 ### To Do
 - [ ] "Rails Week" Conversation
 - [ ] MVC Review
-- [ ] Rails Libraries
 - [ ] Quickly build simple Rails app
 - [ ] Nested Resources
 
