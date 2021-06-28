@@ -1,0 +1,8 @@
+<h2>All the origins!</h2>
+
+<% @origins.each do |origin| %>
+  <div class="origin">
+    <h2>Origin: <%= origin.origin %></h2>
+    <h3><%= link_to "Coffees", origin_coffees_path(origin) %></h3>
+  </div>
+<% end %>
