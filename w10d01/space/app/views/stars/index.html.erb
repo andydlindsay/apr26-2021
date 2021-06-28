@@ -1,0 +1,8 @@
+<h1>All the stars!!</h1>
+
+<% @stars.each do |star| %>
+  <div class="star">
+    <h2><%= star.star_name %></h2>
+    <h3>See the <%= link_to "Planets", star_planets_path(star) %></h3>
+  </div>
+<% end %>
