@@ -15,7 +15,7 @@ puts "Creating origins..."
   )
 end
 
-origins = Origin.all.to_a
+origins = Origin.all
 
 puts "Creating coffees..."
 100.times do
